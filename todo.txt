@@ -9,3 +9,16 @@
  - wc <filename> prints the details of the file.
 
  line  words bytes
+
+----------------------------- Classes ------------------------------------------
+
+  - WcLib
+     - getCharacterCount
+     - getWordCount
+     - getLineCount
+     - getByteCount
+     - getLinesWordsBytes
+
+  - arguments
+    - getFileNames
+    - getOptions
