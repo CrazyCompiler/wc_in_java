@@ -78,11 +78,4 @@ public class WcTest {
     assertArrayEquals("failure - byte arrays not same",result,wc.getLinesWordsBytes());
   }
 
-  @Test
-  public void test_getFilesNames_provides_file_names_when_one_fileName_is_provided_in_argument(){
-    WcLib wc= new WcLib("Hello how are you ?\nwhats up");
-    String[] arguments = {"demo.txt"};
-    String[] filenames = wc.getFileNames();
-  }
-
 }

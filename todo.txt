@@ -19,6 +19,6 @@
      - getByteCount
      - getLinesWordsBytes
 
-  - arguments
+  - argumentSeperator
     - getFileNames
     - getOptions
