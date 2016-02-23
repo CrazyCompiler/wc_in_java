@@ -23,8 +23,6 @@ class WcLib{
     }
 
     public int getByteCount(){
-      if(this.getLineCount()>0)
-        return this.givenData.getBytes().length+(this.getLineCount()-1);
       return this.givenData.getBytes().length;
     }
 
@@ -32,7 +30,5 @@ class WcLib{
       int[] result = {this.getLineCount(),this.getWordCount(),this.getByteCount()};
       return result;
     }
-
-
 
 }

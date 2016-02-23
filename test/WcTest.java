@@ -1,6 +1,7 @@
+import org.junit.Test;
+
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import org.junit.Test;
 
 public class WcTest {
   @Test
@@ -68,21 +69,14 @@ public class WcTest {
   public void test_getLinesWordsBytes_for_empty_string(){
     WcLib wc = new WcLib("");
     int[] result = {0,0,0};
-    assertArrayEquals("failure - byte arrays not same",result,wc.getLinesWordsBytes());
+    assertArrayEquals("Arrays were not equal",result,wc.getLinesWordsBytes());
   }
 
   @Test
   public void test_getLinesWordsBytes_for_two_string(){
     WcLib wc = new WcLib("Hello how are you ?\nwhats up");
-    int[] result = {2,7,29};
-    assertArrayEquals("failure - byte arrays not same",result,wc.getLinesWordsBytes());
-  }
-
-  @Test
-  public void test_getFilesNames_provides_file_names_when_one_fileName_is_provided_in_argument(){
-    WcLib wc= new WcLib("Hello how are you ?\nwhats up");
-    String[] arguments = {"demo.txt"};
-    String[] filenames = wc.getFileNames();
+    int[] result = {2,7,28};
+    assertArrayEquals("Arrays were not equal",result,wc.getLinesWordsBytes());
   }
 
 }
