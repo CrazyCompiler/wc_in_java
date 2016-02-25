@@ -1,15 +1,22 @@
 class Accumulator {
-  private int number;
+  private int[] number;
 
-  public Accumulator(){
-    this.number = 0;
+  public Accumulator(int[] number){
+    this.number = number;
   }
 
-  public void add(int addend){
-    this.number += addend;
+  public void add(int[] addend){
+    for (int index=0;index<this.number.length;index++){
+      this.number[index] += addend[index];
+    }
   }
 
-  public int getSum(){
-    return this.number;
+  public String toString ()
+  {
+    String stringRepresentation = "";
+    for (int index=0; index<this.number.length;index++){
+      stringRepresentation += this.number[index]+" ";
+    }
+    return stringRepresentation;
   }
 }
