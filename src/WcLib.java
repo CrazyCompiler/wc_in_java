@@ -30,5 +30,4 @@ class WcLib{
       int[] result = {this.getLineCount(),this.getWordCount(),this.getByteCount()};
       return result;
     }
-
 }

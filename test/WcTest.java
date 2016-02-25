@@ -76,7 +76,7 @@ public class WcTest {
   public void test_getLinesWordsBytes_for_two_string(){
     WcLib wc = new WcLib("Hello how are you ?\nwhats up");
     int[] result = {2,7,28};
-    assertArrayEquals("Arrays were not equal",result,wc.getLinesWordsBytes());
+    assertArrayEquals("failure - byte arrays not same",result,wc.getLinesWordsBytes());
   }
 
 }
