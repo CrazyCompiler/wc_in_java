@@ -47,9 +47,9 @@ public class ExecutorTests {
     @Test
     public void test_getExecutedCount_for_3_option_and_data_provided() {
         String data = "hello how are you";
-        String[] options = {"-l", "-w", "-m"};
+        String[] options = {"-l", "-w", "-m","-c"};
         Executor ex = new Executor(options, data);
-        String result = "1 4 17 ";
+        String result = "1 4 17 17 ";
         ex.getExecutedCount();
         assertEquals(result, ex.toString());
     }

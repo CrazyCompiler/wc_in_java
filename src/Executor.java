@@ -31,9 +31,12 @@ class Executor {
 
     public int[] getExecutedCount() {
         WcLib lib = new WcLib(this.data);
-        if (this.options.length == 0) this.result = lib.getLinesWordsBytes();
-        for (String option : this.options) {
-            this.result = this.push(this.result, this.performAction(option));
+        if (this.options.length == 0)
+            this.result = lib.getLinesWordsBytes();
+        else {
+            for (String option : this.options) {
+                this.result = this.push(this.result, this.performAction(option));
+            }
         }
         return this.result;
     }

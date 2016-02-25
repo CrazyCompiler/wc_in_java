@@ -11,15 +11,11 @@ class WcLib{
     }
 
     public int getWordCount(){
-      if(this.givenData.length() == 0)
-        return 0;
-      return this.givenData.split("\\s+").length;
+      return (this.givenData.length() == 0) ? 0 : this.givenData.split("\\s+").length;
     }
 
     public int getLineCount(){
-      if(this.givenData.length() == 0)
-        return 0;
-      return this.givenData.split("\n").length;
+      return (this.givenData.length() == 0) ? 0: this.givenData.split("\n").length;
     }
 
     public int getByteCount(){
